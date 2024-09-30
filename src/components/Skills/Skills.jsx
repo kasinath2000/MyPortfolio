@@ -60,7 +60,7 @@ const Skills = () => {
     <section id="skills" className="py-16">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24  ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">My Skills</h2>
-        <p className='text-center text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, delectus.</p>
+        <p className='text-center text-white'>Technologies and tools I use to build seamless digital experiences and deliver high-quality solutions.</p>
         
         {/* Skills Row */}
         <div className="flex mt-5 overflow-x-auto space-x-8 justify-start items-center scrollbar-hide">

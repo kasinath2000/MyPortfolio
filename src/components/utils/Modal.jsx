@@ -1,32 +1,84 @@
-import React from "react";
+import * as React from 'react';
+import {
+    Button,
+    IconButton,
+    Typography,
+    Modal,
+    Box,
+    Stack
+} from '@mui/material';
+import { Close } from '@mui/icons-material';
 
-const Modal = ({ isOpen, onClose, title, children }) => {
-  if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-lg max-w-lg w-full p-6">
-        <div className="flex justify-between items-center">
-          <h2 className="text-xl font-semibold">{title}</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-600 hover:text-gray-900"
-          >
-            &times;
-          </button>
+export default function ThemedModal(props) {
+    const { open, setOpen, onClose } = props;
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => {
+        if (onClose) {
+            onClose();
+        }else{
+            setOpen(false);
+        }
+    };
+
+
+    return (
+        <div>
+
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={{ ...styles.container, width: props?.width }}>
+                    <Box sx={styles.header}>
+                        <Typography id="title" variant='title' component={"div"} sx={styles.headerText}>
+                            {props?.modalTitle}
+                        </Typography>
+                        <IconButton onClick={handleClose}>
+                            <Close />
+                        </IconButton>
+                    </Box>
+                    <Stack sx={styles.body} >
+                        {props?.children}
+                    </Stack>
+                    
+                </Box>
+            </Modal>
         </div>
-        <div className="mt-4">{children}</div>
-        <div className="mt-6 flex justify-end">
-          <button
-            onClick={onClose}
-            className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+    );
+}
+
+
+
+const styles = {
+    container: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '50%',
+        bgcolor: 'background.paper',
+        border: 'none !important',
+        borderRadius: '10px',
+        boxShadow: 24,
+        outline: 'none',
+        // maxHeight: '80%'
+    },
+    header: {
+        padding: '5px 20px',
+        backgroundColor: '#F1F1F1',
+        borderRadius: '10px 10px 0px 0px !important',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    headerText: {
+        fontSize : '16px'
+    },
+    body:{
+        maxHeight : 'calc(100vh - 200px)',
+    }
+
 };
-
-export default Modal;

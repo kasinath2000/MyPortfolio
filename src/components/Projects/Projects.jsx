@@ -15,10 +15,8 @@ const projects = [
       "A personal portfolio website showcasing projects, skills, and contact information.",
     image:
       "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: "React, Tailwind CSS",
+    technologies: "React, Tailwind CSS, postgresql",
     liveDemo: "https://your-portfolio.com",
-    githubLink: "https://github.com/your-username/portfolio",
-    deployLink: "https://your-portfolio-deploy.com",
   },
   {
     title: "Portfolio Website",
@@ -34,14 +32,13 @@ const projects = [
   // Add more project data ................................
 ];
 
-const Projects = () => {
+const Projects = ({showProjectDetails}) => {
   return (
     <section id="projects" className="py-16 pb-32">
-      <div className="container mx-auto text-center ">
+      <div className="container mx-auto text-center mb-10">
       <h2 className="text-3xl text-center font-bold text-white">Projects</h2>
         <p className="text-center text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-          quasi.
+        A showcase of my best work, featuring projects that highlight my skills and expertise in delivering results.
         </p>
       </div>
       <div className="container mx-auto text-center px-20 my-3 ">
@@ -54,7 +51,7 @@ const Projects = () => {
               key={index}
               className="w-full md:w-[45%] lg:w-[30%] flex justify-center  "
             >
-              <Card sx={{maxWidth:345}} className="hover:shadow-xl transition-shadow duration-300 w-full">
+              <Card sx={{maxWidth:345 , boxShadow : 'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;'}} >
                 {/* Project Image */}
                 <CardMedia sx={{height:140}}
                   component="img"
@@ -89,9 +86,13 @@ const Projects = () => {
                       Live Demo
                     </Button>
                   )}
-                  {project.githubLink && (
+                
                     <Button
-                    onClick={() => window.open(seemore.url, '_blank')}
+                    onClick={() => showProjectDetails({
+                      open : true,
+                      data : project,
+                      type : "project"
+                    })}
                       color="primary"
                       href={project.seemore}
                       target="_blank"
@@ -99,7 +100,7 @@ const Projects = () => {
                     >
                       see more..
                     </Button>
-                  )}
+                 
                   
                 </div>
               </Card>
