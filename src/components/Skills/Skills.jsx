@@ -34,6 +34,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 //     );
 //   };
 import React, { useEffect, useState, useRef } from 'react';
+import { Scrolling } from './Scrolling';
 
 const skillsList = [
   { name: 'JavaScript', logo: '/img/js.png' },
@@ -55,7 +56,7 @@ const skillsList = [
 ];
 
 const Skills = () => {
-
+  
   return (
     <section id="skills" className="py-16">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24  ">
@@ -63,13 +64,8 @@ const Skills = () => {
         <p className='text-center text-white'>Technologies and tools I use to build seamless digital experiences and deliver high-quality solutions.</p>
         
         {/* Skills Row */}
-        <div className="flex mt-5 overflow-x-auto space-x-8 justify-start items-center scrollbar-hide">
-          {skillsList.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center min-w-[100px] animate-marquee-infinite  ">
-              <img src={skill.logo} alt={skill.name} className="w-16 h-16 md:w-8 md:h-8 object-contain mb-4 shadow-xl rounded-sm" />
-              <p className="text-center font-semibold text-sm text-white">{skill.name}</p>
-            </div>
-          ))}
+        <div >
+         <Scrolling skills={skillsList} speed={10000} />
         </div>
       </div>
     </section>
