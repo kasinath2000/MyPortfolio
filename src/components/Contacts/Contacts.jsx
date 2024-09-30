@@ -38,7 +38,7 @@ const Contacts = () => {
     },
   ];
   return (
-    <section id="contacts" className="bg-[#ECECEC]  py-12">
+    <section id="contacts" className="  py-12">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
@@ -50,7 +50,7 @@ const Contacts = () => {
         {/* Contact Form and Social Links */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-12 space-y-8 lg:space-y-0">
           {/* Left: Contact Form */}
-          <div className="w-full lg:w-1/2 bg-[#ECECEC]  p-6 shadow-sm rounded-lg">
+          <div className="w-full lg:w-1/2  p-6 shadow-sm rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
@@ -119,7 +119,7 @@ const Contacts = () => {
 
           {/* Right: Social Links */}
           <div className="w-full lg:w-1/2 text-center">
-            <h3 className="text-2xl font-semibold mb-4">Connect with me</h3>
+            <h3 className="text-2xl font-semibold mb-4 ">Connect with me</h3>
             <div className="flex justify-center space-x-6">
               {socialLinks.map((link, index) => (
                 <div

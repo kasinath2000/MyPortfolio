@@ -57,17 +57,17 @@ const skillsList = [
 const Skills = () => {
 
   return (
-    <section id="skills" className="bg-gray-100 py-12">
+    <section id="skills" className="py-16">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24  ">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">My Skills</h2>
-        <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, delectus.</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">My Skills</h2>
+        <p className='text-center text-white'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, delectus.</p>
         
         {/* Skills Row */}
         <div className="flex mt-5 overflow-x-auto space-x-8 justify-start items-center scrollbar-hide">
           {skillsList.map((skill, index) => (
             <div key={index} className="flex flex-col items-center min-w-[100px] animate-marquee-infinite  ">
-              <img src={skill.logo} alt={skill.name} className="w-16 h-16 md:w-8 md:h-8 object-contain mb-4" />
-              <p className="text-center font-semibold text-sm">{skill.name}</p>
+              <img src={skill.logo} alt={skill.name} className="w-16 h-16 md:w-8 md:h-8 object-contain mb-4 shadow-xl rounded-sm" />
+              <p className="text-center font-semibold text-sm text-white">{skill.name}</p>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './Images/logo.svg'
+import logo from '../assets/images/logo.svg'
 
 function Logo({width = '100px',className}) {
   return (

@@ -5,18 +5,22 @@ import Home from "./components/Home/Home"
 import Navbar from "./components/Navbar/Navbar"
 import Projects from "./components/Projects/Projects"
 import Skills from "./components/Skills/Skills"
+import './App.css';
+import Background from "./components/utils/Background"
 function App() {
 
   return (
-    <>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contacts/>
-      <Footer/>
-    </>
+    <div>
+      <Navbar />
+      <Home />
+      <Background>
+        <About />
+        <Skills />
+        <Projects />
+      </Background>
+      <Contacts />
+      <Footer />
+    </div>
   )
 }
 

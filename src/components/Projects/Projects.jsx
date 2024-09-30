@@ -28,7 +28,6 @@ const projects = [
       "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: "React, Tailwind CSS",
     liveDemo: "https://your-portfolio.com",
-    seemore: "",
   },
  
 
@@ -37,10 +36,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-8  bg-[#ECECEC] ">
+    <section id="projects" className="py-16 pb-32">
       <div className="container mx-auto text-center ">
-      <h2 className="text-3xl text-center font-bold ">Projects</h2>
-        <p className="text-center">
+      <h2 className="text-3xl text-center font-bold text-white">Projects</h2>
+        <p className="text-center text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
           quasi.
         </p>
