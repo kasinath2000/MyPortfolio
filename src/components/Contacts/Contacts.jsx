@@ -44,6 +44,8 @@ const Contacts = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Contact Me
         </h2>
+        <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, delectus.</p>
+
 
         {/* Contact Form and Social Links */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-12 space-y-8 lg:space-y-0">
@@ -68,7 +70,7 @@ const Contacts = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold text-gray-600"
@@ -84,7 +86,7 @@ const Contacts = () => {
                   required
                   className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-              </div>
+              </div> */}
 
               <div>
                 <label

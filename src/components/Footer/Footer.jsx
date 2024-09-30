@@ -21,7 +21,7 @@ const Footer = () => {
       <footer className="bg-[#4c4b4b] text-white py-3">
         <div className="container  mx-auto px-10 py-1 flex  items-center  justify-between   space-y-6  sm:px-8 md:px-16 lg:px-20 xl:px-24 ">
         {/* Logo */}
-        <Logo className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 mb-4"/>
+        <Logo className="w-16 backdrop-invert sm:w-10 md:w-10 lg:w-28 xl:w-32 mb-4"/>
 
         {/* Copyright */}
         <Typography variant="body2" className="text-center mb-2">

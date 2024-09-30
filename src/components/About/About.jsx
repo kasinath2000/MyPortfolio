@@ -5,6 +5,7 @@ const About = () => {
     return (
       <section id="about" className="py-8  bg-[#ECECEC] ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-20">
+          
         
 
 

@@ -1,10 +1,10 @@
 import React from 'react'
 import logo from './Images/logo.svg'
 
-function Logo({width = '100px'}) {
+function Logo({width = '100px',className}) {
   return (
     <div>
-      <img src={logo} height='50' width='90' alt="logo" />
+      <img className={className} src={logo} height='50' width='90' alt="logo" />
     </div>
   )
 }

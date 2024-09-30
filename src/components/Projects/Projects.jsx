@@ -23,36 +23,14 @@ const projects = [
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
+      "A personal portfolio website showcasing projects, skills, and contact information..",
     image:
       "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     technologies: "React, Tailwind CSS",
     liveDemo: "https://your-portfolio.com",
-    githubLink: "https://github.com/your-username/portfolio",
-    deployLink: "https://your-portfolio-deploy.com",
+    seemore: "",
   },
-  {
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    image:
-      "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: "React, Tailwind CSS",
-    liveDemo: "https://your-portfolio.com",
-    githubLink: "https://github.com/your-username/portfolio",
-    deployLink: "https://your-portfolio-deploy.com",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    image:
-      "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    technologies: "React, Tailwind CSS",
-    liveDemo: "https://your-portfolio.com",
-    githubLink: "https://github.com/your-username/portfolio",
-    deployLink: "https://your-portfolio-deploy.com",
-  },
+ 
 
   // Add more project data ................................
 ];
@@ -67,19 +45,19 @@ const Projects = () => {
           quasi.
         </p>
       </div>
-      <div className="container mx-auto text-center px-20 my-3  border">
+      <div className="container mx-auto text-center px-20 my-3 ">
         
 
         {/* Flex container for project cards */}
-        <div className="flex flex-wrap justify-center gap-8 border  ">
+        <div className="flex flex-wrap justify-center gap-3  ">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="w-full md:w-[45%] lg:w-[30%] flex justify-center"
+              className="w-full md:w-[45%] lg:w-[30%] flex justify-center  "
             >
-              <Card className="hover:shadow-xl transition-shadow duration-300 w-full">
+              <Card sx={{maxWidth:345}} className="hover:shadow-xl transition-shadow duration-300 w-full">
                 {/* Project Image */}
-                <CardMedia
+                <CardMedia sx={{height:140}}
                   component="img"
                   height="200"
                   image={project.image}
@@ -100,11 +78,11 @@ const Projects = () => {
                 </CardContent>
 
                 {/* Action Buttons */}
-                <div className="p-1 flex justify-between space-x-1 flex-col md:flex-row md:space-y-0 ">
+                <div className="p-1 flex  space-x-1 flex-col md:flex-row md:space-y-0  ">
                   {project.liveDemo && (
-                    <Button
-                      variant="contained"
-                      // color="primary"
+                    <Button className=""
+                    size="small"
+                      
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -114,26 +92,16 @@ const Projects = () => {
                   )}
                   {project.githubLink && (
                     <Button
-                      variant="outlined"
+                    onClick={() => window.open(seemore.url, '_blank')}
                       color="primary"
-                      href={project.githubLink}
+                      href={project.seemore}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub
+                      see more..
                     </Button>
                   )}
-                  {project.deployLink && (
-                    <Button
-                      variant="contained"
-                      color="success"
-                      href={project.deployLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Deploy Link
-                    </Button>
-                  )}
+                  
                 </div>
               </Card>
             </div>
