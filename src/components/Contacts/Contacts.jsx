@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook , FaInstagram  } from "react-icons/fa";
 
 const Contacts = () => {
   // Form state
@@ -26,82 +26,98 @@ const Contacts = () => {
   const socialLinks = [
     {
       icon: <FaGithub size={24} />,
-      url: "https://github.com/your-username",
+      url: "https://github.com/kasinath2000",
     },
     {
       icon: <FaLinkedin size={24} />,
-      url: "https://linkedin.com/in/your-username",
+      url: "www.linkedin.com/in/kasinath-mandal-a5a6621ba",
     },
     {
-      icon: <FaTwitter size={24} />,
-      url: "https://twitter.com/your-username",
+      icon: <FaFacebook size={24} />,
+      url: "https://www.facebook.com/kasinath.mandal.58/",
+    },
+    {
+      icon: <FaInstagram  size={24} />,
+      url: "https://www.instagram.com/kasinath_km_2000",
     },
   ];
   return (
     <section id="contacts" className="  py-12">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
         {/* Section Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2 className="text-3xl md:text-3xl font-bold text-center ">
           Contact Me
         </h2>
-        <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, delectus.</p>
+        <p className='text-center'>Get in Touch for Your Next Project!</p>
+        {/* Contact Information */}
+        <div className="text-center text-[#928d8d]">
+          <p className="text-sm mt-1">
+            <strong>Email:</strong> <a href="mailto:kasi21.12.2000@gmail.com" className="text-blue-500 hover:underline">kasi21.12.2000@gmail.com</a>
+          </p>
+          <p className="text-sm mt-1">
+            <strong>Phone:</strong> <a href="tel:+197586012413" className="text-blue-500 hover:underline">+19 75860 12413</a>
+          </p>
+        </div>
 
 
         {/* Contact Form and Social Links */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-12 space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-12 space-y-8 lg:space-y-0 ">
           {/* Left: Contact Form */}
           <div className="w-full lg:w-1/2  p-6 shadow-sm rounded-lg">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label
+            <form onSubmit={handleSubmit} className="space-y-2">
+              <div className=''>
+                {/* <label
                   htmlFor="name"
                   className="block text-sm font-semibold text-gray-600"
                 >
                   Name
-                </label>
+                </label> */}
                 <input
+                  placeholder="Name.."
                   id="name"
                   name="name"
                   type="text"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-2 p-2  rounded-lg focus:outline-none "
                 />
               </div>
 
-              {/* <div>
-                <label
+              <div>
+                {/* <label
                   htmlFor="email"
                   className="block text-sm font-semibold text-gray-600"
                 >
                   Email
-                </label>
+                </label> */}
                 <input
+                  placeholder="Email.."
                   id="email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-2 p-2  rounded-lg focus:outline-none"
                 />
-              </div> */}
+              </div>
 
               <div>
-                <label
+                {/* <label
                   htmlFor="message"
                   className="block text-sm font-semibold text-gray-600"
                 >
                   Message
-                </label>
+                </label> */}
                 <textarea
+                  placeholder="Message.."
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full mt-2 p-2 rounded-lg focus:outline-none  "
                   rows="4"
                 ></textarea>
               </div>
@@ -119,8 +135,10 @@ const Contacts = () => {
 
           {/* Right: Social Links */}
           <div className="w-full lg:w-1/2 text-center">
-            <h3 className="text-2xl font-semibold mb-4 ">Connect with me</h3>
-            <div className="flex justify-center space-x-6">
+            <h3 className="text-2xl font-semibold ">Connect with me</h3>
+            <p className='text-center'>Let's Connect on Social Media</p>
+
+            <div className="flex justify-center space-x-6 m-2 ">
               {socialLinks.map((link, index) => (
                 <div
                   key={index}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProjectDetails({ data }) {
+export default function ProjectDetails({ data , handleClose}) {
     return (
         <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg ">
 
@@ -37,9 +37,9 @@ export default function ProjectDetails({ data }) {
                 >Live Demo</a
                 >
                 <a
-                    href="https://your-portfolio-deploy.com"
-                    className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition"
-                    target="_blank"
+                    onClick={handleClose}
+                    className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition cursor-pointer"
+                    
                 >Close</a
                 >
             </div>
