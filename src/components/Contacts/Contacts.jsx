@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { FaGithub, FaLinkedin, FaFacebook , FaInstagram  } from "react-icons/fa";
 
 const Contacts = () => {
+  const [contactInfo, setContactInfo] = useState({
+    email: "kasi21.12.2000@gmail.com",
+    phone: "+19 75860 12413",
+  });
   // Form state
   const [formData, setFormData] = useState({
     name: "",
@@ -52,10 +56,10 @@ const Contacts = () => {
         {/* Contact Information */}
         <div className="text-center text-[#928d8d]">
           <p className="text-sm mt-1">
-            <strong>Email:</strong> <a href="mailto:kasi21.12.2000@gmail.com" className="text-blue-500 hover:underline">kasi21.12.2000@gmail.com</a>
+            <strong>Email:</strong>{""} <a href={`mailto:${contactInfo.email}`} className="text-blue-500 hover:underline">{contactInfo.email}</a>
           </p>
           <p className="text-sm mt-1">
-            <strong>Phone:</strong> <a href="tel:+197586012413" className="text-blue-500 hover:underline">+19 75860 12413</a>
+            <strong>Phone:</strong> {""} <a href={`tel:${contactInfo.phone}`} className="text-blue-500 hover:underline">{contactInfo.phone}</a>
           </p>
         </div>
 
