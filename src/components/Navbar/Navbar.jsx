@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../Logo";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiMoon, FiSun } from "react-icons/fi";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true"
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +60,18 @@ const Navbar = () => {
     setIsMenuOpen(false); // Close the menu on link click
   };
 
+  // Handle dark mode toggle
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    if (!isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   return (
     <>
       <nav
@@ -73,17 +88,24 @@ const Navbar = () => {
             <Logo width="" />
           </div>
 
-          {/* Right side - Hamburger icon for small screens */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-black focus:outline-none"
-            >
-              {/* Toggle between menu open and close icons */}
-              {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          
+          <div className="flex items-center space-x-4 md:hidden">
+            <button onClick={toggleDarkMode} className="focus:outline-none">
+              {isDarkMode ? <FiSun size={24} /> : <FiMoon size={24} />}
             </button>
+            {/* Right side - Hamburger icon for small screens */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-black focus:outline-none"
+              >
+                {/* Toggle between menu open and close icons */}
+                {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              </button>
+            </div>
           </div>
 
+          
           {/* Right side - Navigation Links */}
           <div className="hidden md:flex space-x-10 lg:space-x-10 ">
             {navLinks.map((link) => (
@@ -98,6 +120,8 @@ const Navbar = () => {
               </button>
             ))}
           </div>
+
+          
         </div>
 
         {/* Mobile Menu - Show when hamburger is clicked */}

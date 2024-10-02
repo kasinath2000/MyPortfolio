@@ -11,7 +11,7 @@ const Home = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 px-5 space-y-8 md:px-20 md:space-y-0   ">
         
         {/* Left Side - Information and Buttons */}
-        <div className="flex flex-col justify-center space-y-3 w-full border ">
+        <div className="flex flex-col justify-center space-y-3 w-full  ">
           <h3 className="text-sm font-medium sm:text-sm ">Hi, i am</h3>
           <h1 className="text-4xl sm:text-5xl font-bold">Kasinath.</h1>
           <p className="text-sm font-medium sm:text-md"> Hi, I'm Kasinath Mandal, a passionate freelance web developer. I specialize in creating web sites that help businesses grow and achieve their goals.

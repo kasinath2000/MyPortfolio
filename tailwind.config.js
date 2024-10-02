@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:'class',
   theme: {
     extend: {
       keyframes: {
@@ -28,5 +29,6 @@ export default {
     require('tailwind-scrollbar-hide')
   ],
 }
+
 
 
