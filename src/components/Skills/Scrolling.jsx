@@ -6,7 +6,10 @@ import "./Scrolling.css";
 const Scrolling = ({ skills, speed = 5000 }) => {
     return (
       <div className="inner mt-4">
+         <div className="arrow-mask-left" />
+         <div className="arrow-mask-right" />
         <div className="wrapper">
+
           <section className="section-a" style={{ "--speed": `${speed}ms` }}>
             {skills.map((skill, idx) => (
               <div className="image bg-white rounded-full shadow-lg w-16 h-16" key={idx}>

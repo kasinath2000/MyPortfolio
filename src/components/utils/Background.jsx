@@ -1,8 +1,11 @@
+
+
 import React from 'react'
 
 export default function Background({
     children
 }) {
+  
   return (
     <div
     style={{
@@ -10,9 +13,8 @@ export default function Background({
         clipPath : 'polygon(72% 11%, 100% 0, 100% 100%, 0 100%, 0 0)',
         backgroundColor : '#5463FF',
         color : 'white !important'
-        
-        
     }}
+
     >
         {children}
     </div>

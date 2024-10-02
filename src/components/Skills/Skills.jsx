@@ -25,10 +25,10 @@ const Skills = () => {
     <section id="skills" className="py-16">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24  ">
         <h2 className="text-3xl md:text-3xl font-bold text-center mb-8 text-white">My Skills</h2>
-        <p className='text-center text-white'>Technologies and tools I use to build seamless digital experiences and deliver high-quality solutions.</p>
+        <p className='text-center text-white text-sm sm:text-base md:text-lg'>Technologies and tools I use to build seamless digital experiences and deliver high-quality solutions.</p>
         
         {/* Skills Row */}
-        <div >
+        <div className=''>
          <Scrolling skills={skillsList} speed={10000} />
         </div>
       </div>

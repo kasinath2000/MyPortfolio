@@ -102,7 +102,7 @@ const Navbar = () => {
 
         {/* Mobile Menu - Show when hamburger is clicked */}
         {isMenuOpen && (
-          <div className="md:hidden bg-gray-200 py-2">
+          <div className="md:hidden bg-gray-200">
             {navLinks.map((link) => (
               <button
                 key={link.id}
