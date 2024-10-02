@@ -12,11 +12,14 @@ export default function Background({
         width : '100%',
         clipPath : 'polygon(72% 11%, 100% 0, 100% 100%, 0 100%, 0 0)',
         backgroundColor : '#5463FF',
-        color : 'white !important'
+        color : 'white !important',
+        // add me
+        padding: '20px 0',
     }}
 
     >
         {children}
+      
     </div>
   )
 }

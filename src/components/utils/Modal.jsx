@@ -58,13 +58,18 @@ const styles = {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '50%',
+        // width: '50%',
+        width: '90%', // Responsive width for mobile
+        maxWidth: '600px', // added
         bgcolor: 'background.paper',
         border: 'none !important',
         borderRadius: '10px',
         boxShadow: 24,
         outline: 'none',
         // maxHeight: '80%'
+        maxHeight: '90vh', // Prevent overflow on very small screens
+        display: 'flex',
+        flexDirection: 'column',
     },
     header: {
         padding: '5px 20px',
@@ -79,6 +84,10 @@ const styles = {
     },
     body:{
         maxHeight : 'calc(100vh - 200px)',
+        //me added
+        padding: '20px',
+        overflowY: 'auto', // Enable scrolling if content overflows
+        flexGrow: 1, // Make the body fill the available space
     }
 
 };
