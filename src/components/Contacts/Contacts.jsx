@@ -52,7 +52,7 @@ const Contacts = () => {
         <h2 className="text-3xl md:text-3xl font-bold text-center ">
           Contact Me
         </h2>
-        <p className='text-center'>Get in Touch for Your Next Project!</p>
+        <p className='text-center   text-gray-600 mb-5'>Get in Touch for Your Next Project!</p>
         {/* Contact Information */}
         <div className="text-center text-[#928d8d]">
           <p className="text-sm mt-1">
@@ -84,7 +84,7 @@ const Contacts = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2  rounded-lg focus:outline-none "
+                  className="w-full mt-2 p-2  focus:outline-none border border-gray-100 rounded-lg"
                 />
               </div>
 
@@ -103,7 +103,7 @@ const Contacts = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2  rounded-lg focus:outline-none"
+                  className="w-full mt-2 p-2  border border-gray-100 rounded-lg focus:outline-none"
                 />
               </div>
 
@@ -121,7 +121,7 @@ const Contacts = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full mt-2 p-2 rounded-lg focus:outline-none  "
+                  className="w-full mt-2 p-2 focus:outline-none  border border-gray-100 rounded-lg"
                   rows="4"
                 ></textarea>
               </div>
@@ -142,7 +142,7 @@ const Contacts = () => {
             <h3 className="text-2xl font-semibold ">Connect with me</h3>
             <p className='text-center'>Let's Connect on Social Media</p>
 
-            <div className="flex justify-center space-x-6 m-2 ">
+            <div className="flex justify-center space-x-6 m-2">
               {socialLinks.map((link, index) => (
                 <div
                   key={index}
@@ -161,3 +161,7 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
+
+
+

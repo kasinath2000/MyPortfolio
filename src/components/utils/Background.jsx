@@ -14,7 +14,12 @@ export default function Background({
         backgroundColor : '#5463FF',
         color : 'white !important',
         // add me
-        padding: '20px 0',
+        // padding: '20px 0',
+        // minHeight:'100vh',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // position: 'relative',
+        // overflow: 'hidden',
     }}
 
     >

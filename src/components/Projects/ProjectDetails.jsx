@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectDetails({ data, handleClose }) {
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg sm:p-6 md:p-8">
+    <div className="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg sm:p-6 md:p-8 md:w-full">
       <img
         src={data.image}
         alt="Project Image"
