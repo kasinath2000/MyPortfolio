@@ -8,28 +8,7 @@ import {
   CircularProgress
 } from "@mui/material";
 
-//const projects = [
-//   {
-//     title: "Portfolio Website",
-//     description:
-//       "A personal portfolio website showcasing projects, skills, and contact information.",
-//     image:
-//       "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     technologies: "React, Tailwind CSS, postgresql",
-//     liveDemo: "https://your-portfolio.com",
-//   },
-//   {
-//     title: "Portfolio Website",
-//     description:
-//       "A personal portfolio website showcasing projects, skills, and contact information..",
-//     image:
-//       "https://images.unsplash.com/photo-1719937206491-ed673f64be1f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     technologies: "React, Tailwind CSS",
-//     liveDemo: "https://your-portfolio.com",
-//   },
 
-//   // Add more project data ................................
-// ];
 
 const Projects = ({ showProjectDetails }) => {
   let API =
@@ -71,7 +50,7 @@ const Projects = ({ showProjectDetails }) => {
           skills and expertise in delivering results.
         </p>
       </div>
-      <div className="container mx-auto text-center px-4  ">
+      <div className="container mx-auto text-center px-4 ">
         {/* Flex container for project cards */}
         <div className="flex flex-wrap justify-center gap-4  ">
           {loading ? (
