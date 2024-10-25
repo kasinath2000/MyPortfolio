@@ -7,26 +7,25 @@ const testimonialsData = [
     role: "Founder at Bengal Pictures",
     testimonial:
       "Like this video and ask your questions in the comment section. Don't forget to subscribe for more videos on website designing, digital marketing, and Photoshop.",
-    image: "" || "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
+    image: "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
     rating: 4.5,
   },
   {
-    name: "Subhadip Daas ",
-    role: "owner at Asbab Patra Shop",
+    name: "Subhadip Daas",
+    role: "Owner at Asbab Patra Shop",
     testimonial:
       "Like this video and ask your questions in the comment section. Don't forget to subscribe for more videos on website designing, digital marketing, and Photoshop.",
-      image: "" || "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
-      rating: 5,
+    image: "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
+    rating: 5,
   },
   {
     name: "Prabhakar D",
     role: "Founder / CEO at XYZ",
     testimonial:
       "Like this video and ask your questions in the comment section. Don't forget to subscribe for more videos on website designing, digital marketing, and Photoshop.",
-      image: "" || "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
-      rating: 4,
+    image: "https://i.im.ge/2024/10/25/kbzM8F.pngwing-com-1.png",
+    rating: 4,
   },
-  
 ];
 
 // Function to render stars based on rating
@@ -37,15 +36,12 @@ const renderStars = (rating) => {
 
   return (
     <div className="flex justify-center mb-2 text-yellow-400">
-      {/* Full stars */}
       {Array(fullStars)
         .fill(0)
         .map((_, i) => (
           <FaStar key={`full-${i}`} />
         ))}
-      {/* Half star */}
       {halfStar && <FaStarHalfAlt />}
-      {/* Empty stars */}
       {Array(emptyStars)
         .fill(0)
         .map((_, i) => (
@@ -58,27 +54,24 @@ const renderStars = (rating) => {
 const Testimonials = () => {
   return (
     <section id="testimonials" className="py-16">
-      <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24 ">
-        <h2 className="text-3xl font-bold text-center mb-2">
-         Testimonials
-        </h2>
+      <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-20 xl:px-24">
+        <h2 className="text-3xl font-bold text-center mb-2">Testimonials</h2>
         <p className="text-center text-gray-600 mb-10">
-        Trusted by Professionals & Clients
+          Trusted by Professionals & Clients
         </p>
 
-        {/* Grid layout for testimonials */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 border border-red-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {testimonialsData.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
+              className="bg-white p-6 rounded-lg shadow-lg text-center group"
             >
               {/* User Image */}
               <div className="flex justify-center mb-4">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+                  className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md grayscale group-hover:grayscale-0 transition duration-300"
                 />
               </div>
 
@@ -105,3 +98,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
